@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: poppins;
+}
+.container {
+  background: linear-gradient(90deg, rgb(208, 62, 62), rgb(219, 156, 40));
+  height: 100vh;
+}
+.header {
+  width: 50vw;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  color: white;
+}
+.curr {
+  display: flex;
+  gap: 6px;
+  cursor: pointer;
+}
+.curr .year {
+  font-size: 15px;
+}
+.curr .month {
+  font-size: 30px;
+}
+.icons {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+i {
+  padding: 10px;
+}
+i:hover {
+  background-color: rgb(105, 6, 6);
+  cursor: pointer;
+  border-radius: 20px;
+}
+.calender {
+  width: 50vw;
+  margin: auto;
+  color: white;
+  padding: 15px;
+}
+.weeks {
+  border: 2px solid black;
+  background-color: black;
+  padding: 10px;
+}
+.days {
+  border: 2px solid white;
+  background-color: white;
+  padding: 10px;
+  color: black;
+}
+.weeks ul,
+.days ul {
+  display: grid;
+  grid-template-columns: 95px 95px 95px 95px 95px 95px 95px;
+}
+.weeks ul li,
+.days ul li {
+  display: flex;
+  justify-content: center;
+  width: 80px;
+  padding: 5px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.inactive {
+  color: grey;
+}
+.active {
+  background-color: orangered;
+}
+.days ul li:hover {
+  background-color: orangered;
+}
+
+/* adding responsiveness */
+@media (max-width: 600px) {
+  .header {
+    width: 90vw;
+  }
+  .calender {
+    width: 90vw;
+  }
+  .days ul li,
+  .weeks ul li {
+    width: 45px;
+  }
+  .weeks ul,
+  .days ul {
+    grid-template-columns: 45px 45px 45px 45px 45px 45px 45px;
+  }
+}
+@media (min-width: 600px) and (max-width: 1000px) {
+  .header {
+    width: 90vw;
+  }
+  .calender {
+    width: 70vw;
+  }
+  .days ul li,
+  .weeks ul li {
+    width: 56px;
+  }
+  .weeks ul,
+  .days ul {
+    grid-template-columns: 56px 56px 56px 56px 56px 56px 56px;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .header {
+    width: 90vw;
+  }
+  .calender {
+    width: 68vw;
+  }
+  .days ul li,
+  .weeks ul li {
+    width: 100px;
+  }
+  .weeks ul,
+  .days ul {
+    grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
+  }
+}
